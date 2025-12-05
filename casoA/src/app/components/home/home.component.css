@@ -1,0 +1,488 @@
+/* === Imagen Foco (alineada a la derecha) === */
+
+.container-energiamarca {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* ✔ Mueve la imagen a la derecha */
+}
+
+.energiamarcas-img {
+  width: 1400px;   /* ✔ Reduce la imagen (ajusta el número) */
+  height: auto;
+  object-fit: contain;
+  margin-left: 100px;  /* Cambia 200px por el valor que tú quieras */
+  margin-top: -600px;  /* Cambia el valor para subir o bajar */
+
+}
+
+/* Contenedor principal para ponerlas una al lado de la otra */
+.contenedor-doble {
+  display: flex;
+  align-items: center;   /* Alinea verticalmente */
+  gap: 30px;             /* Separación entre fotos */
+}
+
+/* Tamaño igual para ambas */
+.foco-img,
+.fotofront-img {
+  width: 350px;   /* Ajusta el tamaño que prefieras */
+  height: auto;
+  object-fit: contain;
+}
+.negro-img {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 350px; /* 👉 Mueve más a la derecha (ajusta el valor) */
+}
+
+.container-marcas {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+  width: 100%;
+  margin-top: 20px; /* Ajusta según tu gusto */
+}
+
+.marcas-img {
+  width: 80%;   /* Aumenta o reduce este valor */
+  max-width: 1200px; /* Tamaño máximo recomendado */
+  height: auto; /* Mantiene proporción */
+}
+
+.energia-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+  gap: 3rem;
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* ==== IMAGENES ==== */
+.energia-image {
+  position: relative;
+  flex: 1;
+  margin-top: 300px;  /* Cambia el valor para subir o bajar */
+}
+
+.main-img {
+  width: 130%; /* 👉 Agrandada */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.overlay-img {
+  position: absolute;
+  bottom: -20px;
+  left: -30px;
+  width: 70%; /* 👉 Agrandada */
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==== CONTENIDO ==== */
+.energia-content {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight {
+  color: #f57c00;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.text-orange {
+  color: #ff9800;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.3;
+}
+
+.description {
+  color: #444;
+  font-size: 1.05rem;
+  max-width: 90%;
+  text-align: justify;
+}
+
+/* ==== BENEFICIOS ==== */
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+mat-icon {
+  font-size: 32px;
+  color: #ff9800;
+  background: #ffe8b3;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.benefit-item h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.benefit-item p {
+  margin: 0.3rem 0 0 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 900px) {
+  .energia-section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .overlay-img {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+.perfil-container {
+  min-height: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 80px;
+}
+
+/* --- Intro Section (texto + imagen) --- */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  text-align: left;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  text-align: justify;
+}
+
+/* --- Contenedores de Misión y Visión --- */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* pegado a la izquierda */
+  gap: 1.8rem;
+  width: 100%;
+  margin-left: 0; /*  sin margen lateral */
+}
+
+.card {
+  width: 100%;
+  max-width: 750px; /* 👈 más pequeño */
+  border: 1.5px solid #ddd;
+  border-left: 4px solid #ff9800;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+}
+
+.card.vision {
+  border-left-color: #ff5722;
+}
+
+.card mat-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ff9800;
+  margin-bottom: 0.6rem;
+}
+
+.card.vision mat-card-title {
+  color: #ff5722;
+}
+
+.card mat-card-content {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Imagen */
+.side-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* --- Values Section --- */
+.values {
+  background-color: #ffe8b3;
+  padding: 2rem 1rem;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.values h2 {
+  color: #222;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.value-card {
+  width: 280px;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.value-card mat-icon {
+  font-size: 40px;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Testimonials Section --- */
+.testimonials {
+  background-color: #0c1633;
+  color: white;
+  padding: 3rem 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonials p {
+  color: #cfd8dc;
+  margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  width: 280px;
+  background: white;
+  color: #333;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card mat-card-title {
+  color: #0c1633;
+  font-weight: bold;
+}
+
+.testimonial-card mat-card-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+/* === Contenedor principal === */
+.contact-container {
+  display: flex;
+  justify-content: flex-start; /* Pegado a la izquierda */
+  align-items: center;
+  height: 60vh; /* Ocupa toda la altura visible */
+  padding-left: 2rem; /* Separación del borde izquierdo */
+  background: none; /* Sin fondo */
+  font-family: 'Inter', sans-serif;
+  margin-top: -100px;
+}
+
+/* === Tarjeta de contacto === */
+.contact-card {
+  background-color: #fccc67;
+  padding: 2.5rem 3rem;
+  width: 320px;
+  min-height: 380px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  color: #000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Efecto hover */
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
+}
+
+/* === Elemento individual de contacto === */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  padding: 1rem 1.2rem; /* más alto para que el ícono no se recorte */
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  overflow: visible; /* evita que se corten íconos */
+}
+
+/* Efecto hover */
+.contact-item:hover {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+/* === Iconos Material === */
+mat-icon {
+  font-size: 32px ; /* tamaño correcto del icono */
+  width: 32px ;
+  height: 32px;
+  color: #000;
+  flex-shrink: 0; /* evita que se achique */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Texto de contacto === */
+.contact-item span {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  display: inline-block;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: #2e2828;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  position: static;
+  width: 100%;
+}
+
+.footer-section {
+  flex: 1 1 120px;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section h4 {
+  font-size: 12px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ffffff;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+.footer-section p {
+  margin: 3px 0;
+  font-size: 11px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.footer-section p:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-links a {
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  border-top: 1px solid black;
+  padding-top: 5px;
+  color: #dddddd;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .intro {
+    align-items: center;
+  }
+
+  .cards-container {
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+    min-height: 220px;
+  }
+}

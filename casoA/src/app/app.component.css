@@ -1,0 +1,31 @@
+/* COLOR AMARILLO SUAVE EXACTO DEL EJEMPLO (#F8CC74) */
+.toolbar-amarillo {
+  background-color: #F8CC74 !important;
+  color: #1E2A36 !important; /* Texto oscuro elegante */
+  font-weight: 600;
+}
+
+/* Ajuste de iconos para que se vean bien */
+.toolbar-amarillo mat-icon {
+  color: #1E2A36 !important;
+}
+
+/* Botones dentro del toolbar */
+.toolbar-amarillo button {
+  color: #1E2A36 !important;
+  font-weight: 600;
+}
+
+/* Opcional: suavizar hover de los botones */
+.toolbar-amarillo button:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Opcional: menú más moderno */
+mat-menu button.mat-menu-item {
+  font-weight: 500;
+}
+
+.btn-usuario {
+  margin-left: auto; /* Empuja el botón completamente a la derecha */
+}

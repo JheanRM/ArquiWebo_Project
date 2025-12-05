@@ -1,0 +1,33 @@
+<div style="margin-bottom: 40px;">
+  <h2>Promedio de Puntos por Cliente</h2>
+  <ngx-charts-bar-vertical
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="promedioData"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabelPromedio"
+    [yAxisLabel]="yAxisLabelPromedio">
+  </ngx-charts-bar-vertical>
+</div>
+
+<div>
+  <h2>Total de Puntos por Cliente</h2>
+  <ngx-charts-bar-vertical
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="totalData"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="'Cliente'"
+    [yAxisLabel]="'Total de puntos'">
+  </ngx-charts-bar-vertical>
+</div>

@@ -1,0 +1,18 @@
+.reporte-container {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.filtros {
+  margin-bottom: 20px;
+}
+
+.filtros label {
+  margin: 0 10px;
+}
+
+ngx-charts-bar-vertical {
+  display: block;
+  margin: auto;
+}

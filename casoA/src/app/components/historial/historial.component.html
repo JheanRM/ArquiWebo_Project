@@ -1,0 +1,115 @@
+<div class="tips-image">
+  <img src="assets/recomendaciones.jpg" alt="reco" class="overlay-img" />
+</div>
+
+
+<section class="values">
+  <h2>Recomendaciones </h2>
+  <div class="values-grid">
+    <mat-card class="value-card">
+      <mat-card-title>Revisa tus consumos diarios de energia⭐</mat-card-title>
+      <mat-card-content>
+        Monitorea tu consumo cada día para entender qué dispositivos gastan más y en qué horarios consumes más energía.      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="value-card">
+      <mat-card-title>Desconecta los equipos en reposo🔌</mat-card-title>
+      <mat-card-content>
+        El “consumo fantasma” puede representar hasta el 10% de tu recibo mensual. Desenchufar = ahorrar.      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="value-card">
+      <mat-card-title>Usa los electrodomésticos en horas de menor uso🕒</mat-card-title>
+      <mat-card-content>
+        Si en tu país existe tarifa por horario, lavar o planchar en horas valle puede reducir tu factura.
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="value-card">
+      <mat-card-title>Activa notificaciones de alto consumo dentro de la plataforma🧠</mat-card-title>
+      <mat-card-content>
+        Usa tu app para recibir alertas cuando un dispositivo o un día esté consumiendo demasiado.
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
+
+<div class="form-wrapper">
+  <mat-card class="example-card">
+    <mat-card-title>Registro de Consumo de Dispositivo</mat-card-title>
+
+    <mat-card-content>
+      <form [formGroup]="historialForm" (ngSubmit)="registrarPago()" class="form-container">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Tipo de Dispositivo</mat-label>
+          <input matInput formControlName="type" placeholder="e.g., Refrigeradora, TV">
+        </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+          <mat-label>Fecha de Inicio</mat-label>
+          <input matInput [matDatepicker]="pickerStart" formControlName="datetimeStar">
+          <mat-datepicker-toggle matSuffix [for]="pickerStart"></mat-datepicker-toggle>
+          <mat-datepicker #pickerStart></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Fecha de Fin</mat-label>
+          <input matInput [matDatepicker]="pickerEnd" formControlName="datetimeEnd">
+          <mat-datepicker-toggle matSuffix [for]="pickerEnd"></mat-datepicker-toggle>
+          <mat-datepicker #pickerEnd></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Consumo (e.g., kWh)</mat-label>
+          <input matInput formControlName="consumption" placeholder="e.g., 5.3 kWh">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Precio (Costo total) $</mat-label>
+          <input matInput formControlName="price" placeholder="e.g., 15.50">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Comentarios/Notas</mat-label>
+          <input matInput formControlName="message" placeholder="dudas/consultas/notas">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">
+          Registrar
+        </button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<footer class="footer">
+  <div class="footer-section">
+    <h4>ACERCA DE</h4>
+    <p>ECOWATT</p>
+    <p>Condiciones del servicio</p>
+    <p>Términos y Políticas</p>
+  </div>
+  <div class="footer-section">
+    <h4>MI CUENTA</h4>
+    <p>Cuenta</p>
+    <p>¿Eres Administrador?</p>
+  </div>
+  <div class="footer-section">
+    <h4>AYUDA</h4>
+    <p>¿Cómo usar el servicio?</p>
+  </div>
+  <div class="footer-section">
+    <h4>DESCUBRE</h4>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ECOWATT</p>
+  </div>
+</footer>

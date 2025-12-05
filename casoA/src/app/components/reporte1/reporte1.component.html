@@ -1,0 +1,25 @@
+<div class="reporte-container">
+  <div class="filtros">
+    <label>Inicio:</label>
+    <input type="number" [(ngModel)]="inicio" placeholder="YYYYMMDD">
+    <label>Fin:</label>
+    <input type="number" [(ngModel)]="fin" placeholder="YYYYMMDD">
+    <button mat-raised-button color="primary" (click)="filtrar()">Filtrar</button>
+  </div>
+
+  <ngx-charts-bar-vertical
+    *ngIf="chartData.length"
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="chartData"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [roundDomains]="true">
+  </ngx-charts-bar-vertical>
+</div>

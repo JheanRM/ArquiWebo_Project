@@ -1,0 +1,241 @@
+<div class="ia-container">
+  <!-- Sección Principal -->
+  <section class="hero-section">
+    <h1 class="main-title">IA que aprende de ti para ayudarte a ahorrar más.</h1>
+    <p class="subtitle">
+      Nuestro Inteligencia artificial analiza tu consumo, hábitos y horarios para ofrecerte la experiencia energética más eficiente
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3 class="feature-title">Recomendaciones inteligentes</h3>
+        <p class="feature-description">
+          Te sugiero acciones concretas para reducir tu consumo eléctrico basadas en tus patrones diarios.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3 class="feature-title">Automatización de rutinas</h3>
+        <p class="feature-description">
+          Activo o desecho dispositivos automáticamente según tus horarios y necesidades. No tienes que programar nada, la IA lo aprende contigo.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3 class="feature-title">Programación de alertas personalizadas</h3>
+        <p class="feature-description">
+          Nuestro Inteligencia Artificial analiza tus patrones de uso para enviarte alertas solo cuando importa. Además de que tu puedes programarlas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Separador -->
+  <div class="divider"></div>
+
+  <!-- Sección de Beneficios -->
+  <section class="benefits-section">
+    <h2 class="benefits-title">Descubre los beneficios</h2>
+    <p class="benefits-subtitle">¿Qué incluye?</p>
+
+    <div class="table-container">
+      <table class="comparison-table">
+        <thead>
+        <tr>
+          <th class="functionality-col">Funcionalidad</th>
+          <th class="plan-col">hogar fremium</th>
+          <th class="plan-col">Hogar Premium</th>
+          <th class="plan-col">Pequeños Negocios</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="functionality-name">Visualización de consumo en tiempo real</td>
+          <td class="plan-feature">—</td>
+          <td class="plan-feature">—</td>
+          <td class="plan-feature checked">✓</td>
+        </tr>
+        <tr>
+          <td class="functionality-name">Alertas básicas de alto consumo</td>
+          <td class="plan-feature">—</td>
+          <td class="plan-feature checked">✓</td>
+          <td class="plan-feature checked">✓</td>
+        </tr>
+        <tr>
+          <td class="functionality-name">Recomendaciones energéticas</td>
+          <td class="plan-feature">—</td>
+          <td class="plan-feature checked">✓</td>
+          <td class="plan-feature checked">✓</td>
+        </tr>
+        <tr>
+          <td class="functionality-name">Automatización de dispositivos con IA</td>
+          <td class="plan-feature">—</td>
+          <td class="plan-feature checked">✓</td>
+          <td class="plan-feature checked">✓</td>
+        </tr>
+        <tr>
+          <td class="functionality-name">Gestión de múltiples dispositivos</td>
+          <td class="plan-feature checked">✓</td>
+          <td class="plan-feature checked">✓</td>
+          <td class="plan-feature checked">✓</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<div class="plans-container">
+  <h1 class="title">Planes</h1>
+
+  <div class="cards-container">
+    <!-- Plan Básico -->
+    <div class="plan-with-button">
+      <mat-card class="plan-card">
+        <div class="plan-header basic-plan">
+          <h2>Básico</h2>
+        </div>
+
+        <mat-card-content>
+          <div class="price-section">
+            <div class="monthly-price">S/5 mensual</div>
+            <div class="annual-price">S/8 mensual en plan anual</div>
+          </div>
+
+          <mat-list class="features-list">
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Hasta 3 dispositivos vinculados</span>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Anuncios limitados</span>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Consejos básicos</span>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- Botón fuera del mat-card -->
+      <button (click)="irHistorial()" class="continuar-btn basic-btn">Historial de pago</button>
+    </div>
+
+    <!-- Plan Premium Hogar -->
+    <div class="plan-with-button">
+      <mat-card class="plan-card">
+        <div class="plan-header home-plan">
+          <h2>Premium</h2>
+          <p>Plan hogar</p>
+        </div>
+
+        <mat-card-content>
+          <div class="price-section">
+            <div class="monthly-price">S/10 mensual</div>
+            <div class="annual-price">S/15 mensual en plan anual</div>
+          </div>
+
+          <mat-list class="features-list">
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Dispositivos vinculados ilimitados</span>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Sin anuncios</span>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Acceso a todos los consejos disponibles</span>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Automatización y alertas con IA</span>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+
+      <button (click)="irHistorial()" class="continuar-btn home-btn">Historial de pago</button>
+    </div>
+
+    <!-- Plan Premium Negocio -->
+    <div class="plan-with-button">
+      <mat-card class="plan-card">
+        <div class="plan-header business-plan">
+          <h2>Premium</h2>
+          <p>Plan Negocio</p>
+        </div>
+
+        <mat-card-content>
+          <div class="price-section">
+            <div class="monthly-price">S/20 mensual</div>
+            <div class="annual-price">S/16.5 mensual en plan anual</div>
+          </div>
+
+          <mat-list class="features-list">
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Dispositivos vinculados ilimitados</span>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Sin anuncios</span>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Acceso a todos los consejos disponibles</span>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Automatización y alertas con IA</span>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Gestión multisucursal (hasta 3)</span>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon matListIcon class="feature-icon">check</mat-icon>
+              <span>Reportes avanzados (hasta 3)</span>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+
+      <button (click)="irHistorial()" class="continuar-btn business-btn">Historial de pago</button>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-section">
+    <h4>ACERCA DE</h4>
+    <p>ECOWATT</p>
+    <p>Condiciones del servicio</p>
+    <p>Términos y Políticas</p>
+  </div>
+  <div class="footer-section">
+    <h4>MI CUENTA</h4>
+    <p>Cuenta</p>
+    <p>¿Eres Administrador?</p>
+  </div>
+  <div class="footer-section">
+    <h4>AYUDA</h4>
+    <p>¿Cómo usar el servicio?</p>
+  </div>
+  <div class="footer-section">
+    <h4>DESCUBRE</h4>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ECOWATT</p>
+  </div>
+</footer>

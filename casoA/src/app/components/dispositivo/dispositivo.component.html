@@ -1,0 +1,92 @@
+<div class="energias-image">
+  <img src="assets/energias.PNG" alt="reco" class="puntos-img" />
+</div>
+
+<section class="values">
+  <h2>Datos Curiosos</h2>
+  <div class="values-grid">
+    <mat-card class="value-card">
+      <mat-card-title>El cargador conectado sin usar sigue consumiendo energía⚡</mat-card-title>
+      <mat-card-content>
+        Aunque no esté cargando el celular, un cargador enchufado puede gastar hasta 0.26W por hora, conocido como consumo vampiro.
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="value-card">
+      <mat-card-title>El microondas consume más energía apagado⚡</mat-card-title>
+      <mat-card-content>
+        Su reloj digital puede gastar más en un año que el propio calentamiento de alimentos si lo usas poco.
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="value-card">
+      <mat-card-title>El refrigerador es el electrodoméstico que más energía consume⚡</mat-card-title>
+      <mat-card-content>
+        Trabaja 24/7 y puede representar entre 30% y 40% del consumo mensual total.
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="value-card">
+      <mat-card-title>Cargar un celular durante toda la noche desperdicia energía⚡</mat-card-title>
+      <mat-card-content>
+        Cuando la batería está llena, el cargador sigue consumiendo y calentando la batería de manera innecesaria.
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
+
+<!-- FORMULARIO CENTRADO Y MEDIANO -->
+<div class="form-wrapper">
+  <mat-card class="example-card">
+    <mat-card-title>Registro de Dispositivo</mat-card-title>
+
+    <mat-card-content>
+      <form [formGroup]="dispositivoForm" (ngSubmit)="registrarPago()" class="form-container">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="name" placeholder="Mori mi religión">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese el año de vencimiento</mat-label>
+          <input matInput formControlName="instalationDate" placeholder="YY">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">
+          Registrar
+        </button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<footer class="footer">
+  <div class="footer-section">
+    <h4>ACERCA DE</h4>
+    <p>ECOWATT</p>
+    <p>Condiciones del servicio</p>
+    <p>Términos y Políticas</p>
+  </div>
+  <div class="footer-section">
+    <h4>MI CUENTA</h4>
+    <p>Cuenta</p>
+    <p>¿Eres Administrador?</p>
+  </div>
+  <div class="footer-section">
+    <h4>AYUDA</h4>
+    <p>¿Cómo usar el servicio?</p>
+  </div>
+  <div class="footer-section">
+    <h4>DESCUBRE</h4>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ECOWATT</p>
+  </div>
+</footer>

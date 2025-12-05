@@ -1,0 +1,51 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id. </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Nombre Titular -->
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef> type </th>
+      <td mat-cell *matCellDef="let element"> {{ element.type }} </td>
+    </ng-container>
+
+    <!-- Número de Tarjeta -->
+    <ng-container matColumnDef="message">
+      <th mat-header-cell *matHeaderCellDef> message </th>
+      <td mat-cell *matCellDef="let element"> {{ element.message }} </td>
+    </ng-container>
+
+    <!-- Fecha Expiración -->
+    <ng-container matColumnDef="datetimeStar">
+      <th mat-header-cell *matHeaderCellDef>datetimeStar </th>
+      <td mat-cell *matCellDef="let element"> {{ element.datetimeStar | date:'MM/yyyy' }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="consumption">
+      <th mat-header-cell *matHeaderCellDef> consumption </th>
+      <td mat-cell *matCellDef="let element"> {{ element.consumption }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="datetimeEnd">
+      <th mat-header-cell *matHeaderCellDef> datetimeEnd </th>
+      <td mat-cell *matCellDef="let element"> {{ element.datetimeEnd | date:'MM/yyyy' }} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Precio </th>
+      <td mat-cell *matCellDef="let element"> {{ element.price | currency:'USD' }} </td>
+    </ng-container>
+
+    <!-- Header y filas -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <!-- Paginador -->
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

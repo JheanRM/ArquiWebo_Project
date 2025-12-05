@@ -1,0 +1,22 @@
+<!-- reporte5.component.html -->
+
+<div class="container">
+  <h2>Recompensas por Cliente</h2>
+
+  <div>
+    <input [(ngModel)]="clientNameInput" placeholder="Nombre del cliente" />
+    <button (click)="fetchRewards(clientNameInput)">Buscar</button>
+  </div>
+
+  <div *ngIf="rewards.length > 0; else noData">
+    <ul>
+      <li *ngFor="let r of rewards">
+        Cliente: {{ r.clientName }} - Recompensa: {{ r.rewardName }}
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #noData>
+    <p>No se encontraron recompensas para este cliente.</p>
+  </ng-template>
+</div>

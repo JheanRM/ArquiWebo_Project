@@ -1,0 +1,64 @@
+<div class="puntos-container">
+  <div class="puntos-image">
+    <img src="assets/puntos.PNG" alt="reco" class="puntos-img" />
+  </div>
+
+  <mat-card class="example-card">
+    <mat-card-title>Registro de Puntos</mat-card-title>
+
+    <mat-card-content>
+      <form [formGroup]="puntosForm"
+            (ngSubmit)="registerForm()"
+            class="form-container">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Puntos</mat-label>
+          <input matInput formControlName="points" placeholder="Cant Puntos">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Actividad</mat-label>
+          <mat-select formControlName="typeTransactions">
+            <mat-option [value]="'Activo'">Activo</mat-option>
+            <mat-option [value]="'No Activo'">No Activo</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+        <button mat-raised-button color="primary" type="submit">
+          Registrar
+        </button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<footer class="footer">
+  <div class="footer-section">
+    <h4>ACERCA DE</h4>
+    <p>ECOWATT</p>
+    <p>Condiciones del servicio</p>
+    <p>Términos y Políticas</p>
+  </div>
+  <div class="footer-section">
+    <h4>MI CUENTA</h4>
+    <p>Cuenta</p>
+    <p>¿Eres Administrador?</p>
+  </div>
+  <div class="footer-section">
+    <h4>AYUDA</h4>
+    <p>¿Cómo usar el servicio?</p>
+  </div>
+  <div class="footer-section">
+    <h4>DESCUBRE</h4>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ECOWATT</p>
+  </div>
+</footer>

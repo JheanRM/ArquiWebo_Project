@@ -1,0 +1,33 @@
+<div class="report-container">
+  <h2>Filtrar Consumo</h2>
+
+  <div class="filters">
+    <input type="text" [(ngModel)]="filterType" placeholder="Filtrar por Tipo">
+    <button (click)="filtrarPorTipo()">Filtrar</button>
+
+    <input type="date" [(ngModel)]="filterDate" placeholder="Filtrar por Fecha Exacta">
+    <button (click)="filtrarPorFecha()">Filtrar</button>
+
+    <input type="date" [(ngModel)]="filterStartDate" placeholder="Fecha Inicio">
+    <input type="date" [(ngModel)]="filterEndDate" placeholder="Fecha Fin">
+    <button (click)="filtrarPorRango()">Filtrar por Rango</button>
+
+    <input type="text" [(ngModel)]="filterConsumption" placeholder="Filtrar por Consumo">
+    <button (click)="filtrarPorConsumo()">Filtrar por Consumo</button>
+
+
+  </div>
+
+  <ngx-charts-bar-vertical
+    *ngIf="chartData.length"
+    [results]="chartData"
+    [scheme]="colorScheme"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel">
+  </ngx-charts-bar-vertical>
+</div>

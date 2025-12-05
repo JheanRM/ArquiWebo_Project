@@ -1,0 +1,99 @@
+<!-- TOOLBAR (solo aparece si el usuario está logueado) -->
+<mat-toolbar class="toolbar-amarillo" *ngIf="verificar()">
+
+  <!-- HOME -->
+  <button mat-button [routerLink]="['/homes']">
+    <mat-icon>home</mat-icon> Home
+  </button>
+
+  <!-- PLANES -->
+  <button mat-button [routerLink]="['/Planes']">
+    <mat-icon>category</mat-icon> Planes
+  </button>
+
+  <!-- RECOMPENSAS -->
+  <button mat-button [routerLink]="['/Recompensas']">
+    <mat-icon>card_giftcard</mat-icon> Recompensas
+  </button>
+
+  <!-- PUNTOS -->
+  <button mat-button [routerLink]="['/Puntos']">
+    <mat-icon>star</mat-icon> Puntos
+  </button>
+
+  <!-- DISPOSITIVO (submenú) -->
+  <button mat-button [matMenuTriggerFor]="menuDispositivo">
+    <mat-icon>devices</mat-icon> Dispositivo
+  </button>
+
+  <!-- LISTADOS -->
+  <button mat-button [matMenuTriggerFor]="menuListados">
+    <mat-icon>list</mat-icon> Listados
+  </button>
+
+  <!-- REPORTES -->
+  <button mat-button [matMenuTriggerFor]="menuReport">
+    <mat-icon>insert_chart</mat-icon> Reportes
+  </button>
+
+  <!-- USUARIO -->
+  <button class="btn-usuario" mat-button [matMenuTriggerFor]="menuSalir">
+    <mat-icon>person</mat-icon> Usuario
+  </button>
+
+</mat-toolbar>
+
+<!-- MENÚ REPORTES -->
+<mat-menu #menuReport="matMenu">
+  <button mat-menu-item [routerLink]="['/reporteUno']">
+    <span>Reporte 1</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/reporteDos']">
+    <span>Reporte 2</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/reporteCuatro']">
+    <span>Reporte 3</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/reporteCinco']">
+    <span>Reporte 4</span>
+  </button>
+</mat-menu>
+
+<!-- MENÚ LISTADOS -->
+<mat-menu #menuListados="matMenu">
+  <button mat-menu-item [routerLink]="['/listado-recompensas']">
+    <mat-icon>card_giftcard</mat-icon>
+    <span>Listado Recompensas</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/listado-historial']">
+    <mat-icon>history</mat-icon>
+    <span>Listado Historial</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/planes-listado']">
+    <mat-icon>category</mat-icon>
+    <span>Planes Listado</span>
+  </button>
+</mat-menu>
+
+<!-- MENÚ USUARIO -->
+<mat-menu #menuSalir="matMenu">
+  <button mat-menu-item routerLink="/login" (click)="cerrar()">
+    <mat-icon>logout</mat-icon>
+    <span>Cerrar sesión</span>
+  </button>
+</mat-menu>
+
+<!-- MENÚ DISPOSITIVO -->
+<mat-menu #menuDispositivo="matMenu">
+  <button mat-menu-item [routerLink]="['/Dispositivo']">
+    <mat-icon>settings</mat-icon>
+    <span>Registro Dispositivo</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/historial']">
+    <mat-icon>history</mat-icon>
+    <span>Historial</span>
+  </button>
+</mat-menu>
+
+<!-- CONTENIDO PRINCIPAL -->
+<router-outlet></router-outlet>

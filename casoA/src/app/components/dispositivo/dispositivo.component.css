@@ -1,0 +1,216 @@
+.energias-image {
+  position: absolute;    /* 🔥 Hace que NO mueva el contenido */
+  top: 480px;             /* Ajusta arriba/abajo */
+  left: 580px;            /* Ajusta izquierda/derecha */
+  z-index: 9999;         /* Se coloca encima de todo */
+  pointer-events: none;  /* Opcional: evita que bloquee clics */
+}
+
+.puntos-img {
+  width: 650px;          /* Ajusta tamaño */
+  height: auto;
+}
+
+
+
+.dispositivo-image {
+  margin-top: 180px; /* Ajusta este valor para bajar o subir */
+}
+
+/* ---- CONTENEDOR QUE LIMITA EL ANCHO ---- */
+.form-wrapper {
+  width: 100%;
+  max-width: 420px;       /* Ajusta el tamaño exacto del formulario */
+  margin-left: 1320px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+
+/* ---- TARJETA ---- */
+.example-card {
+  width: 100%;             /* Se adapta al wrapper */
+  margin: 0;
+  box-shadow: none;        /* Opcional */
+}
+
+/* ---- FORM ---- */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---- INPUTS ---- */
+mat-form-field {
+  width: 100%;             /* No se expandirá más del wrapper */
+}
+
+/* ---- BOTÓN ---- */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 480px) {
+  .form-wrapper {
+    max-width: 90%;
+    padding: 16px;
+  }
+}
+
+/* Contenedor general */
+.values {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Título principal */
+.values h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1d2b34;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Grid responsive */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Estilo de las tarjetas */
+.value-card {
+  padding: 16px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease-in-out;
+}
+
+/* Hover */
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Título de cada tarjeta */
+.value-card mat-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #24333d;
+  margin-bottom: 10px;
+}
+
+/* Contenido del texto */
+.value-card mat-card-content {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #4b5a63;
+}
+
+/* Responsive móviles */
+@media (max-width: 600px) {
+  .values h2 {
+    font-size: 1.5rem;
+  }
+
+  .value-card {
+    padding: 14px;
+  }
+
+  .value-card mat-card-title {
+    font-size: 1rem;
+  }
+
+  .value-card mat-card-content {
+    font-size: 0.92rem;
+  }
+}
+
+
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #2e2828;
+  color: white;
+  padding: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.footer-section {
+  flex: 1 1 120px;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section h4 {
+  font-size: 12px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ffffff;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+.footer-section p {
+  margin: 3px 0;
+  font-size: 11px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.footer-section p:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-links a {
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  border-top: 1px solid black;
+  padding-top: 5px;
+  color: #dddddd;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
